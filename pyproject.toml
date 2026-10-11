@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deezer-export"
+version = "1.0.0"
+dependencies = [
+    "requests",
+    "pandas",
+    "selenium",
+    "webdriver-manager"
+]
+readme = "README.md"
+
+[project.scripts]
+deezer = "deezer_tools.cli:main"
