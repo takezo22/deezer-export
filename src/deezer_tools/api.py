@@ -28,10 +28,10 @@ def run_api_playlist(playlist_id):
     df = pd.DataFrame(tracks)
 
     # Export CSV
-    df.to_csv("deezer_playlist.csv", index=False, encoding="utf-8-sig")
+    df.to_csv("data/deezer_playlist.csv", index=False, encoding="utf-8-sig")
 
     # Export TXT (optionnel)
-    with open("deezer_playlist.txt", "w", encoding="utf-8") as f:
+    with open("data/deezer_playlist.txt", "w", encoding="utf-8") as f:
         for _, row in df.iterrows():
             f.write(f"{row['artist']} - {row['title']}\n")
 

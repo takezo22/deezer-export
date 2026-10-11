@@ -1,7 +1,8 @@
 # DEEZER EXPORT SCRIPT
 
 ## Description
-You currently can't use an API to save your loved songs because they're not registered in a playlist. So I made this script to get the list of songs/authors in all your playlists.
+You currently can't use an API to save your loved songs because they're not registered in a playlist. So I made this script to get the list of songs/authors in all your playlists.\
+You can also export the content of your playlist, get stats on them and compare playlists together to see if there are matching songs
 
 ## Requirements
 Python > 3.12, selenium
