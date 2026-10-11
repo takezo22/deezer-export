@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/deezer-tools/__init__.py
+src/deezer-tools/api.py
+src/deezer-tools/cli.py
+src/deezer-tools/scraper.py
+src/deezer_export.egg-info/PKG-INFO
+src/deezer_export.egg-info/SOURCES.txt
+src/deezer_export.egg-info/dependency_links.txt
+src/deezer_export.egg-info/entry_points.txt
+src/deezer_export.egg-info/requires.txt
+src/deezer_export.egg-info/top_level.txt

@@ -1,7 +1,7 @@
 import requests
 import pandas as pd
 
-def run_api_playlist(playlist_id="14868405643"):
+def run_api_playlist(playlist_id):
     BASE_URL = f"https://api.deezer.com/playlist/{playlist_id}/tracks"
 
     tracks = []

@@ -65,4 +65,4 @@ def run_scraper():
         for _, row in df.iterrows():
             f.write(f"{row['artist']} - {row['title']}\n")
 
-    print(f"\n✅ Export terminé : {len(df)} titres récupérés")
+    print(f"\nExport terminé : {len(df)} titres récupérés")

@@ -1,0 +1,2 @@
+[console_scripts]
+deezer = deezer_tools.cli:main
