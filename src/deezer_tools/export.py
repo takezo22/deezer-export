@@ -27,14 +27,14 @@ def create_scan_directory():
 
     return scan_dir
 
-def export_tracks(tracks, scan_dir):
+def export_tracks(tracks, scan_dir): # tracks must contain 'artist' and 'title' keys
 
     df = pd.DataFrame(
         tracks,
         columns=["title", "artist"]
     )
 
-    csv_path = scan_dir / "deezer_coups_de_coeur.csv"
+    csv_path = scan_dir / "deezer_songs.csv"
 
     df.to_csv(
         csv_path,
@@ -43,7 +43,7 @@ def export_tracks(tracks, scan_dir):
         sep=";"
     )
 
-    txt_path = scan_dir / "deezer_coups_de_coeur.txt"
+    txt_path = scan_dir / "deezer_songs.txt"
 
     with open(txt_path, "w", encoding="utf-8") as f:
         for track in tracks:
@@ -51,7 +51,7 @@ def export_tracks(tracks, scan_dir):
                 f"{track['artist']} - {track['title']}\n"
             )
 
-    json_path = scan_dir / "deezer_coups_de_coeur.json"
+    json_path = scan_dir / "deezer_songs.json"
 
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(

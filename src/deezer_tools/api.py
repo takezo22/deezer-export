@@ -1,5 +1,6 @@
 import requests
-import pandas as pd
+from deezer_tools.export import *
+
 
 def run_api_playlist(playlist_id):
     BASE_URL = f"https://api.deezer.com/playlist/{playlist_id}/tracks"
@@ -23,16 +24,10 @@ def run_api_playlist(playlist_id):
                 "explicit": track["explicit_lyrics"],
             })
 
-        url = data.get("next")  # pagination Deezer
+        url = data.get("next")
+    scan_dir = create_scan_directory()
+    export_tracks(tracks, scan_dir)
 
-    df = pd.DataFrame(tracks)
+    return tracks
 
-    # Export CSV
-    df.to_csv("data/deezer_playlist.csv", index=False, encoding="utf-8-sig")
 
-    # Export TXT (optionnel)
-    with open("data/deezer_playlist.txt", "w", encoding="utf-8") as f:
-        for _, row in df.iterrows():
-            f.write(f"{row['artist']} - {row['title']}\n")
-
-    print(f"Export terminé : {len(df)} titres")
